@@ -8,9 +8,9 @@ from tokenauth import TokenAuth
 
 url = 'https://localhost:44327/api/Accounts/Login'
 myobj = {
-  "name": "hamodaboi",
+  "name": "snazzyboi",
   "email": "no@thanku.com",
-  "password": "hamodaboi"
+  "password": "snazzyboi"
 }
 x = requests.post(url, json = myobj,verify='D:\stuff\localhost.pem')
 json_response = x.json()
