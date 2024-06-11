@@ -10,15 +10,21 @@ crsr = cnxn.cursor()
 
 
 def rundbinsertiontask():
-    for x in range(9088878):
-        rand = random.randint(10000, 30000)
-        name = randomname.get_name()
+
+    for x in range(100):
         # print(name, rand)
-        crsr.execute("exec Sp_AddEmployee ?, Male, ?", name, rand)
-
-
-
-
+        print("carnage ensues...")
+        crsr.execute("exec Sp_AddEmployee ?, Male, ?", randomname.get_name(), random.randint(10000, 30000))
+        crsr.execute("exec Sp_AddEmployee ?, Female, ?", randomname.get_name(), random.randint(10000, 30000))
+        crsr.execute("exec Sp_AddEmployee ?, Male, ?", randomname.get_name(), random.randint(10000, 30000))
+        crsr.execute("exec Sp_AddEmployee ?, Female, ?", randomname.get_name(), random.randint(10000, 30000))
+        crsr.execute("exec Sp_AddEmployee ?, Male, ?", randomname.get_name(), random.randint(10000, 30000))
+        crsr.execute("exec Sp_AddEmployee ?, Female, ?", randomname.get_name(), random.randint(10000, 30000))
+        crsr.execute("exec Sp_AddEmployee ?, Male, ?", randomname.get_name(), random.randint(10000, 30000))
+        crsr.execute("exec Sp_AddEmployee ?, Female, ?", randomname.get_name(), random.randint(10000, 30000))
+        crsr.execute("exec Sp_AddEmployee ?, Male, ?", randomname.get_name(), random.randint(10000, 30000))
+        crsr.execute("exec Sp_AddEmployee ?, Female, ?", randomname.get_name(), random.randint(10000, 30000))
+        crsr.execute("exec Sp_AddEmployee ?, Male, ?", randomname.get_name(), random.randint(10000, 30000))
 
 
 if __name__ == '__main__':
@@ -40,4 +46,4 @@ if __name__ == '__main__':
     p4.join()
     p5.join()
 
-    print("finished")
+    print("mass insert finished")
